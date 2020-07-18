@@ -43,9 +43,9 @@ bool larger(T a, T b) {
 int main(int argc, char *argv[]) {
   int n = 10000;
   int *arr = sort::genRandomArray(n, 1, n);
-  selectionSortC(arr, n, _less);
-  sort::printArray(arr, n);
-  cout << endl;
+  sort::testSort("选择排序", selectionSort, arr, n);
+  // selectionSortC(arr, n, _less);
+  // sort::printArray(arr, n);
 
   delete[] arr;
   return 0;
