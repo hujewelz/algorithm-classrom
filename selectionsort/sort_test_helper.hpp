@@ -25,11 +25,20 @@ void printArray(T arr[], int n) {
 }
 
 template <typename T>
+bool isSorted(T *arr, int n) {
+  for (int i = 0; i < n - 1; i++) {
+    if (arr[i] > arr[i + 1]) return false;
+  }
+  return true;
+}
+
+template <typename T>
 void testSort(const std::string name, void (*sort)(T *, int), T *arr, int n) {
   clock_t start = clock();
   sort(arr, n);
   clock_t end = clock();
-  std::cout << name << ": " << double(end - start) / CLOCKS_PER_SEC << "s"
+  assert(isSorted(arr, n));
+  std::cout << name << ": " << double(end - start) / CLOCKS_PER_SEC << " s"
             << std::endl;
 }
 
