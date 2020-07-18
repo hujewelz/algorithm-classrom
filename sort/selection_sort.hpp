@@ -3,9 +3,6 @@
 
 #include <iostream>
 
-#include "sort_test_helper.hpp"
-using namespace std;
-
 template <typename T>
 void selectionSort(T *arr, int n) {
   for (int i = 0; i < n; i++) {
@@ -16,7 +13,7 @@ void selectionSort(T *arr, int n) {
         minIndex = j;
       }
     }
-    swap(arr[i], arr[minIndex]);
+    std::swap(arr[i], arr[minIndex]);
   }
 }
 
