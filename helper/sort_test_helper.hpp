@@ -42,6 +42,13 @@ void testSort(const std::string name, void (*sort)(T *, int), T *arr, int n) {
             << std::endl;
 }
 
+template <typename T>
+T *copyArray(T *arr, int n) {
+  T *res = new T[n];
+  std::copy(arr, arr + n, res);
+  return res;
+}
+
 }  // namespace sort
 
 #endif  // SORT_TEST_HELPER_H

@@ -1,3 +1,6 @@
+#ifndef ALGORITHM_SELECTION_SORT_H
+#define ALGORITHM_SELECTION_SORT_H
+
 #include <iostream>
 
 #include "sort_test_helper.hpp"
@@ -39,3 +42,5 @@ template <typename T>
 bool larger(T a, T b) {
   return a > b;
 }
+
+#endif  // ALGORITHM_SELECTION_SORT_H
